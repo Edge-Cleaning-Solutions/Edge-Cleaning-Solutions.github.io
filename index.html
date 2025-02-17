@@ -8,6 +8,7 @@
     <link href="css/website.css" rel="stylesheet">
 </head>
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="index.html">Edge Cleaning Solutions</a>
@@ -15,9 +16,9 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link active" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="services.html">Services</a>
@@ -30,14 +31,48 @@
         </div>
     </nav>
 
-    <div class="container mt-4 rounded-container">
-        <div class="content">
-            <h1>Welcome to Edge Cleaning Solutions</h1>
-            <p>Pardon the mess as our website is still under construction. Check back soon for updates!</p>
+    <div class="container rounded-container text-center">
+        <h1>Welcome to Edge Cleaning Solutions</h1>
+        <p>Providing top-quality cleaning services to keep your spaces spotless and fresh.</p>
+        
+        <div class="buttons d-flex justify-content-center gap-3 mt-3">
+            <a href="services.html" class="btn btn-primary">Our Services</a>
+            <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
         </div>
-        <div class="buttons">
-            <a href="services.html" class="btn btn-primary circle-btn">Services</a>
-            <a href="contact.html" class="btn btn-secondary circle-btn">Contact Us</a>
+    </div>
+
+    <div class="container mt-5">
+        <h2 class="text-center">What Our Clients Say</h2>
+        <br>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="testimonial-box">
+                        <p class="testimonial-text">"Edge Cleaning Solutions did a great job on our office cleaning! We hired them for deep cleaning, including ozone treatment, and the results were incredible. The entire space looks spotless, and it smells as fresh and clean as we hoped. The team was on time and really took care to ensure every area was cleaned. We will certainly be using them for regular cleanings moving forward."</p>
+                        <h5>- David M., Office Manager</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="testimonial-box">
+                        <p class="testimonial-text">"Edge Cleaning Solutions showed off their skills! Our space looks the best it has in months. Highly recommend!"</p>
+                        <h5>- Mike L., Business Owner</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="testimonial-box">
+                        <p class="testimonial-text">"Edge Cleaning Solutions did a fantastic job with their ozone treatment. The fresh air smell is incredible, and it lasts. They got it right and exceeded our expectations."</p>
+                        <h5>- Nate A., Business Owner</h5>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </div>
 
