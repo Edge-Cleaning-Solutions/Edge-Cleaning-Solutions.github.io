@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to right, #326799, #1c3b60);
+    background: url('../images/cleaning_business_background_1920x1080.png') no-repeat center center fixed;
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -14,15 +14,24 @@ body {
 }
 
 .rounded-container {
-    background: rgba(255, 255, 255, 0.9);
+    background: #1c3b60;
     border-radius: 15px;
     padding: 40px;
     max-width: 900px;
     margin: 40px auto;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
-    color: #333;
+    color: #fff;
 }
+
+.navbar {
+    background-color: #1c3b60 !important; /* Bootstrap primary blue */
+}
+
+.navbar .nav-link, .navbar-brand {
+    color: white !important; /* Ensure text remains readable */
+}
+
 
 .buttons {
     display: flex;
@@ -32,20 +41,24 @@ body {
 }
 
 .testimonial-box {
-    background: rgba(255, 255, 255, 0.9);
+    background: #1c3b60;
     padding: 20px;
     border-radius: 10px;
     max-width: 700px;
     margin: auto;
     text-align: center;
     min-height: 250px;
-    color: #333;
+    color: #fff;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .testimonial-text {
     font-style: italic;
     font-size: 18px;
+}
+
+.carousel-item {
+    transition: transform 1.5s ease-in-out;
 }
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
