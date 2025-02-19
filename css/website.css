@@ -79,7 +79,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Align items to the top */
+    justify-content: center; /* Align items to the top */
 }
 .service-box:hover {
     transform: translateY(-5px);
@@ -112,5 +112,10 @@ body {
 
     .testimonial-box {
         width: 90%;
+    }
+
+    .service-box h4 {
+        align-self: center; /* Centers heading on small screens */
+        text-align: center;
     }
 }
