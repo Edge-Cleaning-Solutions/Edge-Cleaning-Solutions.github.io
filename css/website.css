@@ -79,7 +79,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Align items to the top */
+    justify-content: flex-start; /* Align items to the top */
 }
 .service-box:hover {
     transform: translateY(-5px);
