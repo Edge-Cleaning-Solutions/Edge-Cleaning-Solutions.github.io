@@ -44,7 +44,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#" onclick="scrollToTop(event)">
+            <a class="navbar-brand" href="index.html">
                 <img src="images/logo.jpg" alt="Edge Cleaning Solutions Logo" height="40">
                 Edge Cleaning Solutions
             </a>
@@ -53,8 +53,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="scrollToTop(event)">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="scrollToTop(event)">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
                 </ul>
             </div>
@@ -62,104 +62,103 @@
     </nav>
     <br>
     <br>
-    <section id="home" class="container rounded-container mt-5 text-center">
-        <div class="row">
-            
-            <div class="col-md-6 d-flex flex-column justify-content-center">
-                <h1>Welcome to Edge Cleaning Solutions</h1>
-                <br>
-                <p>Providing top-quality cleaning services to keep your spaces spotless and fresh.</p>
-            </div>
-
-            <div class="col-md-6">
-                <img src="images/logo.jpg" alt="Edge Cleaning Solutions Logo" height="200px" class="my-4">
-            </div>
-        </div>
-        <hr>
-        <h3>Why Choose Edge Cleaning Solutions?</h3>
-        <br>
-        <p>At Edge Cleaning Solutions, we are dedicated to building long-term relationships with our clients by providing exceptional cleaning services with a personalized touch. Our goal is to make your life easier by delivering reliable, top-tier cleaning solutions every time.</p>
-        <p>Contact us today for a free estimate or to learn more about how we can assist with your cleaning needs. Experience the Edge Cleaning Solutions difference today!</p>
-        <a href="#services" class="btn btn-primary mt-3">Our Services</a>
-        <a href="#contact" class="btn btn-primary mt-3">Get a Free Estimate</a>
-        <br>
-        <br>
-        <hr>
-        <h3 class="text-center">What Our Clients Say</h3>
-        <br>
-        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="testimonial-box">
-                        <p class="testimonial-text">"Edge Cleaning Solutions did a great job on our office cleaning! We hired them for deep cleaning, including ozone treatment, and the results were incredible. The entire space looks spotless, and it smells as fresh and clean as we hoped. The team was on time and really took care to ensure every area was cleaned. We will certainly be using them for regular cleanings moving forward."</p>
-                        <h5>- David M., Office Manager</h5>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="testimonial-box">
-                        <p class="testimonial-text">"Edge Cleaning Solutions showed off their skills! Our space looks the best it has in months. Highly recommend!"</p>
-                        <h5>- Mike L., Business Owner</h5>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="testimonial-box">
-                        <p class="testimonial-text">"Edge Cleaning Solutions did a fantastic job with their ozone treatment. The fresh air smell is incredible, and it lasts. They got it right and exceeded our expectations."</p>
-                        <h5>- Nate A., Business Owner</h5>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </section>
-
+    <style>
+        .service-box {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            color: white; /* Ensures text color is white */
+            padding: 40px;
+            border-radius: 15px;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+    
+        .service-box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.75); /* Dark overlay for better text visibility */
+            z-index: 1;
+        }
+    
+        .service-content {
+            position: relative;
+            z-index: 2;
+            color: white; /* Ensure text stays white */
+        }
+    
+        .service-content h4, .service-content p {
+            color: white; /* Explicitly set white text */
+        }
+    
+        /* Background images for each service */
+        #post-construction .service-box {
+            background-image: url('images/post-construction.jpg');
+        }
+    
+        #commercial-cleaning .service-box {
+            background-image: url('images/commercial-cleaning.jpg');
+        }
+    
+        #floor-cleaning .service-box {
+            background-image: url('images/floor-cleaning.jpg');
+        }
+    
+        #residental-pressure-washing .service-box {
+            background-image: url('images/pressure-washing.jpg');
+        }
+    </style>
+    
+    
     <section id="services" class="container rounded-container mt-5">
         <h2 class="text-center mb-4">Our Services</h2>
         <div class="row">
-            <!-- Post-Construction Cleaning -->
-            <div class="col-md-6 col-lg-3">
+            <div id="post-construction" class="col-12 mb-4">
                 <div class="service-box">
-                    <img src="images/post-construction.jpg" alt="Post-Construction Cleaning">
-                    <h4>Post-Construction Cleaning</h4>
-                    <p>We help bring your space back to life after a renovation or construction project.</p>
-                    <a href="services.html#post-construction" class="btn btn-primary mt-2">Learn More</a>
+                    <div class="service-content">
+                        <h4>Post-Construction Cleaning</h4>
+                        <p>After a renovation or construction project, we help bring your space back to life. Our post-construction cleaning service removes dust, debris, and leftover construction materials, leaving your property spotless and ready for use. We clean windows, floors, walls, and all surfaces to remove fine dust particles that can settle after construction. Our team also ensures proper disposal of construction waste, so you don’t have to worry about cleanup.</p>
+                    </div>
                 </div>
             </div>
-            <!-- Commercial Cleaning -->
-            <div class="col-md-6 col-lg-3">
+            
+            <div id="commercial-cleaning" class="col-12 mb-4">
                 <div class="service-box">
-                    <img src="images/commercial-cleaning.jpg" alt="Commercial Cleaning">
-                    <h4>Commercial Cleaning</h4>
-                    <p>We provide thorough cleaning services for offices, retail spaces, and other commercial properties.</p>
-                    <a href="services.html#commercial-cleaning" class="btn btn-primary mt-2">Learn More</a>
+                    <div class="service-content">
+                        <h4>Commercial Cleaning</h4>
+                        <p>Whether you’re running an office, retail space, or another commercial property, we provide thorough cleaning services to maintain a spotless and sanitized environment. Our team specializes in deep cleaning, disinfection, and dust removal, ensuring high-traffic areas remain pristine. We also offer ozone treatment to eliminate bacteria, allergens, and lingering odors, creating a fresher and healthier workspace for employees and customers. Our flexible cleaning schedules allow you to choose daily, weekly, or customized cleaning plans to suit your business needs.</p>
+                    </div>
                 </div>
             </div>
-            <!-- Floor Cleaning -->
-            <div class="col-md-6 col-lg-3">
+            
+            <div id="floor-cleaning" class="col-12 mb-4">
                 <div class="service-box">
-                    <img src="images/floor-cleaning.jpg" alt="Floor Cleaning">
-                    <h4>Floor Cleaning</h4>
-                    <p>We specialize in cleaning all types of floors, including tile, carpet, and hardwood.</p>
-                    <a href="services.html#floor-cleaning" class="btn btn-primary mt-2">Learn More</a>
+                    <div class="service-content">
+                        <h4>Floor Cleaning</h4>
+                        <p>We specialize in cleaning all types of floors, including tile, carpet, vinyl, and hardwood. Our team uses state-of-the-art equipment and eco-friendly cleaning solutions to remove dirt, grime, and stains. Our tile and grout cleaning service restores surfaces to their original shine, while our deep carpet cleaning removes embedded dirt and allergens. Whether your floors need routine maintenance or heavy-duty restoration, we ensure they look spotless and last longer.</p>
+                    </div>
                 </div>
             </div>
-            <!-- Residential Pressure Washing -->
-            <div class="col-md-6 col-lg-3">
+            
+            <div id="residental-pressure-washing" class="col-12 mb-4">
                 <div class="service-box">
-                    <img src="images/pressure-washing.jpg" alt="Residential Pressure Washing">
-                    <h4>Residential Pressure Washing</h4>
-                    <p>Our pressure washing service helps restore your home’s exterior.</p>
-                    <a href="services.html#residental-pressure-washing" class="btn btn-primary mt-2">Learn More</a>
+                    <div class="service-content">
+                        <h4>Residential Pressure Washing</h4>
+                        <p>In the warmer months, our pressure washing service helps restore your home’s exterior. We clean everything from driveways and patios to siding and decks, removing dirt, grime, mold, and mildew buildup. Our high-powered yet gentle cleaning techniques enhance your home's curb appeal and protect surfaces from long-term damage. Whether you're preparing for a special event or just want to maintain a fresh look, our pressure washing service ensures your property stands out.</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div>    
     </section>
+    
 
     <section id="contact" class="container rounded-container mt-5 text-center">
         <h2><b>Need a Quote or Have a Question?</b></h2>
@@ -228,4 +227,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+<style>
+    body {
+        background-image: url("images/background-service.jpg");
+    }
+</style>
 </html>
