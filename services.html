@@ -39,6 +39,13 @@
                 window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
             }
 
+            function requestService(serviceType) {
+                const contactForm = document.getElementById('contact-form');
+                const subjectDropdown = document.getElementById('subject');
+                subjectDropdown.value = serviceType;
+                contactForm.scrollIntoView({ behavior: 'smooth' });
+            }
+
         </script>
     </head>
 <body>
@@ -126,6 +133,7 @@
                     <div class="service-content">
                         <h4>Post-Construction Cleaning</h4>
                         <p>After a renovation or construction project, we help bring your space back to life. Our post-construction cleaning service removes dust, debris, and leftover construction materials, leaving your property spotless and ready for use. We clean windows, floors, walls, and all surfaces to remove fine dust particles that can settle after construction. Our team also ensures proper disposal of construction waste, so you don’t have to worry about cleanup.</p>
+                        <button class="btn btn-primary mt-3" onclick="requestService('Cleaning Request')">Request Service</button>
                     </div>
                 </div>
             </div>
@@ -135,6 +143,7 @@
                     <div class="service-content">
                         <h4>Commercial Cleaning</h4>
                         <p>Whether you’re running an office, retail space, or another commercial property, we provide thorough cleaning services to maintain a spotless and sanitized environment. Our team specializes in deep cleaning, disinfection, and dust removal, ensuring high-traffic areas remain pristine. We also offer ozone treatment to eliminate bacteria, allergens, and lingering odors, creating a fresher and healthier workspace for employees and customers. Our flexible cleaning schedules allow you to choose daily, weekly, or customized cleaning plans to suit your business needs.</p>
+                        <button class="btn btn-primary mt-3" onclick="requestService('Cleaning Request')">Request Service</button>
                     </div>
                 </div>
             </div>
@@ -144,6 +153,7 @@
                     <div class="service-content">
                         <h4>Floor Cleaning</h4>
                         <p>We specialize in cleaning all types of floors, including tile, carpet, vinyl, and hardwood. Our team uses state-of-the-art equipment and eco-friendly cleaning solutions to remove dirt, grime, and stains. Our tile and grout cleaning service restores surfaces to their original shine, while our deep carpet cleaning removes embedded dirt and allergens. Whether your floors need routine maintenance or heavy-duty restoration, we ensure they look spotless and last longer.</p>
+                        <button class="btn btn-primary mt-3" onclick="requestService('Cleaning Request')">Request Service</button>
                     </div>
                 </div>
             </div>
@@ -153,6 +163,7 @@
                     <div class="service-content">
                         <h4>Residential Pressure Washing</h4>
                         <p>In the warmer months, our pressure washing service helps restore your home’s exterior. We clean everything from driveways and patios to siding and decks, removing dirt, grime, mold, and mildew buildup. Our high-powered yet gentle cleaning techniques enhance your home's curb appeal and protect surfaces from long-term damage. Whether you're preparing for a special event or just want to maintain a fresh look, our pressure washing service ensures your property stands out.</p>
+                        <button class="btn btn-primary mt-3" onclick="requestService('Service Request')">Request Service</button>
                     </div>
                 </div>
             </div>
