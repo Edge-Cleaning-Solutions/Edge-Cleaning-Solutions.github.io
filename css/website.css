@@ -87,7 +87,7 @@ body {
 .service-box img {
     width: 100%;
     max-width: 300px; /* Limits the max width for larger screens */
-    height: 240px; /* Ensures consistent height */
+    height: 150px; /* Ensures consistent height */
     object-fit: cover; /* Ensures the image scales properly within the box */
     border-radius: 8px;
 }
