@@ -1,3 +1,21 @@
+/* CSS Custom Properties for maintainability */
+:root {
+    --primary-color: #1c3b60;
+    --secondary-color: #326799;
+    --text-light: #fff;
+    --text-dark: #555;
+    --border-radius: 15px;
+    --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    --transition-speed: 0.3s;
+    --navbar-height: 70px;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--navbar-height);
+}
+
 body {
     background: url('../images/cleaning_business_background_1920x1080.png') no-repeat center center fixed;
     background-size: cover;
@@ -6,9 +24,14 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    color: #fff;
-    padding-top: 70px; /* Adjust this value if necessary based on navbar height */
+    color: var(--text-light);
+    padding-top: var(--navbar-height);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
 
+/* Services page specific background */
+body.services-page {
+    background-image: url('../images/background-service.jpg');
 }
 
 .navbar {
@@ -16,22 +39,32 @@ body {
 }
 
 .rounded-container {
-    background: #1c3b60;
-    border-radius: 15px;
+    background: var(--primary-color);
+    border-radius: var(--border-radius);
     padding: 40px;
     max-width: 900px;
     margin: 40px auto;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--box-shadow);
     text-align: center;
-    color: #fff;
+    color: var(--text-light);
+}
+
+.rounded-container hr {
+    border-color: rgba(255, 255, 255, 0.3);
+    margin: 30px 0;
 }
 
 .navbar {
-    background-color: #1c3b60 !important; /* Bootstrap primary blue */
+    background-color: var(--primary-color) !important;
 }
 
 .navbar .nav-link, .navbar-brand {
-    color: white !important; /* Ensure text remains readable */
+    color: white !important;
+    transition: opacity var(--transition-speed) ease;
+}
+
+.navbar .nav-link:hover {
+    opacity: 0.8;
 }
 
 
@@ -43,15 +76,14 @@ body {
 }
 
 .testimonial-box {
-    background: #1c3b60;
+    background: var(--primary-color);
     padding: 20px;
     border-radius: 10px;
     max-width: 700px;
     margin: auto;
     text-align: center;
     min-height: 225px;
-    color: #fff;
-
+    color: var(--text-light);
 }
 
 .testimonial-text {
@@ -61,6 +93,11 @@ body {
 
 .carousel-item {
     transition: transform 1.5s ease-in-out;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
 }
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
@@ -83,6 +120,7 @@ body {
 }
 .service-box:hover {
     transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
 }
 .service-box img {
     width: 100%;
@@ -94,13 +132,93 @@ body {
 .service-box h4 {
     margin-top: 15px;
     font-weight: bold;
-    color: #326799;
-    align-self: flex-start; /* Align heading to the top */
+    color: var(--secondary-color);
+    align-self: flex-start;
 }
+
 .service-box p {
     font-size: 14px;
-    color: #555;
+    color: var(--text-dark);
+    flex-grow: 1;
+}
 
+/* Service detail boxes for services.html */
+.service-detail-box {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 40px;
+    border-radius: var(--border-radius);
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.service-detail-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 1;
+}
+
+.service-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.service-content h4,
+.service-content p {
+    color: white;
+}
+
+/* Background images for each service detail */
+#post-construction .service-detail-box {
+    background-image: url('../images/post-construction.jpg');
+}
+
+#commercial-cleaning .service-detail-box {
+    background-image: url('../images/commercial-cleaning.jpg');
+}
+
+#floor-cleaning .service-detail-box {
+    background-image: url('../images/floor-cleaning.jpg');
+}
+
+#residential-pressure-washing .service-detail-box {
+    background-image: url('../images/pressure-washing.jpg');
+}
+
+/* Footer styles */
+footer {
+    background: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: opacity var(--transition-speed) ease;
+}
+
+footer a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
 }
 
 /* Responsive Design */
@@ -108,14 +226,45 @@ body {
     .rounded-container {
         width: 90%;
         padding: 30px;
+        margin: 20px auto;
     }
 
     .testimonial-box {
         width: 90%;
+        min-height: auto;
     }
 
     .service-box h4 {
-        align-self: center; /* Centers heading on small screens */
+        align-self: center;
         text-align: center;
+    }
+
+    .service-detail-box {
+        padding: 30px 20px;
+        min-height: 250px;
+    }
+
+    .navbar-brand img {
+        height: 30px !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+        padding-top: 0;
+    }
+
+    .navbar,
+    footer,
+    .btn {
+        display: none;
+    }
+
+    .rounded-container {
+        box-shadow: none;
+        page-break-inside: avoid;
     }
 }

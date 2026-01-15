@@ -3,56 +3,44 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Edge Cleaning Solutions | Professional Cleaning Services</title>
+        <title>Our Services | Edge Cleaning Solutions</title>
 
         <!-- SEO Meta Tags -->
-        <meta name="description" content="Edge Cleaning Solutions provides top-quality cleaning services for offices, homes, and commercial spaces.">
-        <meta name="keywords" content="cleaning services, professional cleaning, office cleaning, home cleaning, deep cleaning, ozone treatment, commercial cleaning">
+        <meta name="description" content="Explore our professional cleaning services: Commercial Cleaning, Post-Construction, Floor Cleaning, and Residential Pressure Washing.">
+        <meta name="keywords" content="cleaning services, professional cleaning, office cleaning, home cleaning, deep cleaning, ozone treatment, commercial cleaning, post-construction cleaning, floor cleaning, pressure washing">
         <meta name="author" content="Edge Cleaning Solutions">
         <meta name="robots" content="index, follow, max-image-preview:large">
 
         <!-- Canonical URL -->
-        <link rel="canonical" href="https://www.edgecleaningsolutions.com">
+        <link rel="canonical" href="https://www.edgecleaningsolutions.com/services.html">
 
         <!-- Open Graph Meta Tags (Facebook, LinkedIn, WhatsApp) -->
-        <meta property="og:title" content="Edge Cleaning Solutions | Professional Cleaning Services">
-        <meta property="og:description" content="Providing expert cleaning services to keep your spaces spotless and fresh. Contact us today!">
-        <meta property="og:url" content="https://www.edgecleaningsolutions.com">
+        <meta property="og:title" content="Our Services | Edge Cleaning Solutions">
+        <meta property="og:description" content="Explore our professional cleaning services: Commercial Cleaning, Post-Construction, Floor Cleaning, and Residential Pressure Washing.">
+        <meta property="og:url" content="https://www.edgecleaningsolutions.com/services.html">
         <meta property="og:type" content="website">
         <meta property="og:image" content="https://www.edgecleaningsolutions.com/images/logo.jpg">
         <meta property="og:image:alt" content="Edge Cleaning Solutions - Professional Cleaning Services">
+        <meta property="og:site_name" content="Edge Cleaning Solutions">
+
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Our Services | Edge Cleaning Solutions">
+        <meta name="twitter:description" content="Explore our professional cleaning services: Commercial Cleaning, Post-Construction, Floor Cleaning, and Residential Pressure Washing.">
+        <meta name="twitter:image" content="https://www.edgecleaningsolutions.com/images/logo.jpg">
     
         <!-- Favicon -->
         <link href="images/favicon.ico" rel="icon">
     
         <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         <link href="css/website.css" rel="stylesheet">
-        <style>
-            html {
-                scroll-behavior: smooth;
-            }
-        </style>
-        <script>
-            function scrollToTop(event) {
-                event.preventDefault(); // Prevent default anchor behavior
-                window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
-            }
-
-            function requestService(serviceType) {
-                const contactForm = document.getElementById('contact-form');
-                const subjectDropdown = document.getElementById('subject');
-                subjectDropdown.value = serviceType;
-                contactForm.scrollIntoView({ behavior: 'smooth' });
-            }
-
-        </script>
     </head>
-<body>
+<body class="services-page">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="images/logo.jpg" alt="Edge Cleaning Solutions Logo" height="40">
+            <a class="navbar-brand" href="index.html" aria-label="Edge Cleaning Solutions Home">
+                <img src="images/logo.jpg" alt="Edge Cleaning Solutions Logo" width="40" height="40">
                 Edge Cleaning Solutions
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,71 +55,14 @@
             </div>
         </div>
     </nav>
-    <br>
-    <br>
-    <style>
-        .service-box {
-            position: relative;
-            background-size: cover;
-            background-position: center;
-            color: white; /* Ensures text color is white */
-            padding: 40px;
-            border-radius: 15px;
-            min-height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            overflow: hidden;
-        }
-    
-        .service-box::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.75); /* Dark overlay for better text visibility */
-            z-index: 1;
-        }
-    
-        .service-content {
-            position: relative;
-            z-index: 2;
-            color: white; /* Ensure text stays white */
-        }
-    
-        .service-content h4, .service-content p {
-            color: white; /* Explicitly set white text */
-        }
-    
-        /* Background images for each service */
-        #post-construction .service-box {
-            background-image: url('images/post-construction.jpg');
-        }
-    
-        #commercial-cleaning .service-box {
-            background-image: url('images/commercial-cleaning.jpg');
-        }
-    
-        #floor-cleaning .service-box {
-            background-image: url('images/floor-cleaning.jpg');
-        }
-    
-        #residental-pressure-washing .service-box {
-            background-image: url('images/pressure-washing.jpg');
-        }
-    </style>
-    
     
     <section id="services" class="container rounded-container mt-5">
-        <h2 class="text-center mb-4">Our Services</h2>
+        <h1 class="text-center mb-4">Our Services</h1>
         <div class="row">
             <div id="post-construction" class="col-12 mb-4">
-                <div class="service-box">
+                <div class="service-detail-box">
                     <div class="service-content">
-                        <h4>Post-Construction Cleaning</h4>
+                        <h2 class="h3">Post-Construction Cleaning</h2>
                         <p>After a renovation or construction project, we help bring your space back to life. Our post-construction cleaning service removes dust, debris, and leftover construction materials, leaving your property spotless and ready for use. We clean windows, floors, walls, and all surfaces to remove fine dust particles that can settle after construction. Our team also ensures proper disposal of construction waste, so you don’t have to worry about cleanup.</p>
                         <button class="btn btn-primary mt-3" onclick="requestService('Cleaning Request')">Request Service</button>
                     </div>
@@ -139,9 +70,9 @@
             </div>
             
             <div id="commercial-cleaning" class="col-12 mb-4">
-                <div class="service-box">
+                <div class="service-detail-box">
                     <div class="service-content">
-                        <h4>Commercial Cleaning</h4>
+                        <h2 class="h3">Commercial Cleaning</h2>
                         <p>Whether you’re running an office, retail space, or another commercial property, we provide thorough cleaning services to maintain a spotless and sanitized environment. Our team specializes in deep cleaning, disinfection, and dust removal, ensuring high-traffic areas remain pristine. We also offer ozone treatment to eliminate bacteria, allergens, and lingering odors, creating a fresher and healthier workspace for employees and customers. Our flexible cleaning schedules allow you to choose daily, weekly, or customized cleaning plans to suit your business needs.</p>
                         <button class="btn btn-primary mt-3" onclick="requestService('Cleaning Request')">Request Service</button>
                     </div>
@@ -149,19 +80,19 @@
             </div>
             
             <div id="floor-cleaning" class="col-12 mb-4">
-                <div class="service-box">
+                <div class="service-detail-box">
                     <div class="service-content">
-                        <h4>Floor Cleaning</h4>
+                        <h2 class="h3">Floor Cleaning</h2>
                         <p>We specialize in cleaning all types of floors, including tile, carpet, vinyl, and hardwood. Our team uses state-of-the-art equipment and eco-friendly cleaning solutions to remove dirt, grime, and stains. Our tile and grout cleaning service restores surfaces to their original shine, while our deep carpet cleaning removes embedded dirt and allergens. Whether your floors need routine maintenance or heavy-duty restoration, we ensure they look spotless and last longer.</p>
                         <button class="btn btn-primary mt-3" onclick="requestService('Cleaning Request')">Request Service</button>
                     </div>
                 </div>
             </div>
             
-            <div id="residental-pressure-washing" class="col-12 mb-4">
-                <div class="service-box">
+            <div id="residential-pressure-washing" class="col-12 mb-4">
+                <div class="service-detail-box">
                     <div class="service-content">
-                        <h4>Residential Pressure Washing</h4>
+                        <h2 class="h3">Residential Pressure Washing</h2>
                         <p>In the warmer months, our pressure washing service helps restore your home’s exterior. We clean everything from driveways and patios to siding and decks, removing dirt, grime, mold, and mildew buildup. Our high-powered yet gentle cleaning techniques enhance your home's curb appeal and protect surfaces from long-term damage. Whether you're preparing for a special event or just want to maintain a fresh look, our pressure washing service ensures your property stands out.</p>
                         <button class="btn btn-primary mt-3" onclick="requestService('Service Request')">Request Service</button>
                     </div>
@@ -179,8 +110,9 @@
             <br>
             <form id="contact-form" action="https://formspree.io/f/mldgorlr" method="POST">
               <div class="mb-3">
-                  <label for="subject" class="form-label">Subject <span style="color: red;">*</span></label>
+                  <label for="subject" class="form-label">Subject <span style="color: red;" aria-label="required">*</span></label>
                   <select name="subject" id="subject" class="form-select" required>
+                      <option value="">Select a subject</option>
                       <option value="Free Estimate">Free Estimate</option>
                       <option value="Cleaning Request">Cleaning Request</option>
                       <option value="Service Request">Service Request</option>
@@ -191,23 +123,23 @@
               </div>
           
               <div class="mb-3">
-                  <label for="description" class="form-label">Description <span style="color: red;">*</span></label>
+                  <label for="description" class="form-label">Description <span style="color: red;" aria-label="required">*</span></label>
                   <textarea name="description" id="description" class="form-control" rows="4" placeholder="Please provide any details about your request, such as the type of cleaning service you need or any questions you may have." required></textarea>
               </div>
           
               <div class="mb-3">
-                  <label for="name" class="form-label">Full Name <span style="color: red;">*</span></label>
+                  <label for="name" class="form-label">Full Name <span style="color: red;" aria-label="required">*</span></label>
                   <input type="text" name="name" id="name" class="form-control" required>
               </div>
           
               <div class="mb-3">
-                  <label for="email" class="form-label">Email <span style="color: red;">*</span></label>
+                  <label for="email" class="form-label">Email <span style="color: red;" aria-label="required">*</span></label>
                   <input type="email" name="email" id="email" class="form-control" required>
               </div>
           
               <div class="mb-3">
-                  <label for="phone" class="form-label">Phone Number <span style="color: red;">*</span></label>
-                  <input type="tel" name="phone" id="phone" class="form-control" required>
+                  <label for="phone" class="form-label">Phone Number <span style="color: red;" aria-label="required">*</span></label>
+                  <input type="tel" name="phone" id="phone" class="form-control" pattern="[0-9\s\-\(\)\+]+" title="Please enter a valid phone number" required>
               </div>
           
               <div class="mb-3">
@@ -219,28 +151,22 @@
                   <label for="job-title" class="form-label">Job Title (Optional)</label>
                   <input type="text" name="jobTitle" id="job-title" class="form-control">
               </div>
+
+              <!-- Honeypot field for spam prevention -->
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
           
               <button type="submit" class="btn btn-primary">Submit</button>
           </form>
     </section>
 
-    <script>
-        document.querySelectorAll('a.nav-link').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const targetId = this.getAttribute('href').substring(1);
-                if (document.getElementById(targetId)) {
-                    e.preventDefault();
-                    document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year">2026</span> Edge Cleaning Solutions. All rights reserved.</p>
+            <p>Professional Cleaning Services | <a href="services.html">Our Services</a> | <a href="#contact">Contact Us</a></p>
+        </div>
+    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
-<style>
-    body {
-        background-image: url("images/background-service.jpg");
-    }
-</style>
 </html>
