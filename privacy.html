@@ -13,6 +13,24 @@
         <!-- Canonical URL -->
         <link rel="canonical" href="https://www.edgecleaningsolutions.com/privacy.html">
     
+        <!-- Google Analytics 4 -->
+        <!-- TODO: Replace G-XXXXXXXXXX with your actual Measurement ID from Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            
+            // Default to denied for GDPR compliance
+            gtag('consent', 'default', {
+                'analytics_storage': 'denied'
+            });
+            
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXXXXX', {
+                'anonymize_ip': true
+            });
+        </script>
+    
         <!-- Favicon -->
         <link href="images/favicon.ico" rel="icon">
     
@@ -229,6 +247,17 @@
 
         <p class="text-muted"><small>This Privacy Policy is effective as of the date listed above and applies to all information collected by Edge Cleaning Solutions through our website and related services.</small></p>
     </section>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent-banner">
+        <div class="cookie-consent-content">
+            <p>We use cookies to improve your experience and analyze website traffic. By clicking "Accept", you consent to our use of cookies. <a href="privacy.html">Learn more</a></p>
+            <div class="cookie-consent-buttons">
+                <button id="cookie-accept" class="btn btn-accept">Accept</button>
+                <button id="cookie-decline" class="btn btn-decline">Decline</button>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="container">

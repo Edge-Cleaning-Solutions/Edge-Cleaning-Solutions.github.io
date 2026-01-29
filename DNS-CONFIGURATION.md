@@ -56,6 +56,8 @@ DMARC tells receiving servers what to do with emails that fail SPF or DKIM check
 v=DMARC1; p=quarantine; rua=mailto:dmarc-reports@edgecleaningsolutions.com; ruf=mailto:dmarc-forensics@edgecleaningsolutions.com; fo=1; pct=100
 ```
 
+**Important:** Before adding this record, ensure you have set up the email addresses for receiving DMARC reports, or replace them with existing email addresses you have access to. Without valid email addresses, DMARC reports will bounce and you won't receive valuable security feedback.
+
 **Explanation:**
 - `v=DMARC1` - DMARC version 1
 - `p=quarantine` - Quarantine emails that fail (recommended for testing; use `p=reject` for strict enforcement)
