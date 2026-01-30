@@ -32,6 +32,24 @@
         <!-- Favicon -->
         <link href="images/favicon.ico" rel="icon">
     
+        <!-- Google Analytics 4 -->
+        <!-- TODO: Replace G-XXXXXXXXXX with your actual Measurement ID from Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            
+            // Default to denied for GDPR compliance
+            gtag('consent', 'default', {
+                'analytics_storage': 'denied'
+            });
+            
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXXXXX', {
+                'anonymize_ip': true
+            });
+        </script>
+    
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         <link href="css/website.css" rel="stylesheet">
@@ -159,10 +177,21 @@
           </form>
     </section>
 
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent-banner">
+        <div class="cookie-consent-content">
+            <p>We use cookies to improve your experience and analyze website traffic. By clicking "Accept", you consent to our use of cookies. <a href="privacy.html">Learn more</a></p>
+            <div class="cookie-consent-buttons">
+                <button id="cookie-accept" class="btn btn-accept">Accept</button>
+                <button id="cookie-decline" class="btn btn-decline">Decline</button>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="container">
             <p>&copy; <span id="current-year">2026</span> Edge Cleaning Solutions. All rights reserved.</p>
-            <p>Professional Cleaning Services | <a href="services.html">Our Services</a> | <a href="#contact">Contact Us</a></p>
+            <p>Professional Cleaning Services | <a href="services.html">Our Services</a> | <a href="#contact">Contact Us</a> | <a href="privacy.html">Privacy Policy</a></p>
         </div>
     </footer>
 
