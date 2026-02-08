@@ -80,6 +80,8 @@
     
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <!-- Font Awesome for Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
         <link href="css/website.css" rel="stylesheet">
     </head>
 <body>
@@ -97,19 +99,49 @@
                     <li class="nav-item"><a class="nav-link" href="#" onclick="scrollToTop(event)">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <a href="tel:+1234567890" class="call-button" aria-label="Call Edge Cleaning Solutions">
+                            <i class="fas fa-phone-alt"></i> Call Now
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <section id="home" class="container rounded-container mt-5 text-center">
-        <div class="row">
-            <div class="col-md-6 d-flex flex-column justify-content-center">
-                <h1>Welcome to Edge Cleaning Solutions</h1>
-                <p class="mt-4">Providing top-quality cleaning services to keep your spaces spotless and fresh.</p>
-            </div>
-
-            <div class="col-md-6">
-                <img src="images/logo.jpg" alt="Edge Cleaning Solutions Logo" width="200" height="200" class="my-4">
+    <section id="home" class="container rounded-container hero-section mt-5 text-center">
+        <div class="row align-items-center">
+            <div class="col-md-8 mx-auto">
+                <h1 class="hero-title">Professional Cleaning Services You Can Trust</h1>
+                <p class="hero-subtitle">Top-quality cleaning solutions for offices, homes, and commercial spaces with a personalized touch.</p>
+                
+                <div class="cta-buttons">
+                    <a href="tel:+1234567890" class="btn btn-cta-primary">
+                        <i class="fas fa-phone-alt"></i> Call Now for Free Quote
+                    </a>
+                    <a href="#contact" class="btn btn-cta-secondary">
+                        <i class="fas fa-envelope"></i> Get Free Estimate
+                    </a>
+                </div>
+                
+                <!-- Trust Badges -->
+                <div class="trust-badges mt-4">
+                    <div class="trust-badge">
+                        <i class="fas fa-check-circle"></i>
+                        <span class="trust-badge-text">Licensed & Insured</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-clock"></i>
+                        <span class="trust-badge-text">24/7 Support</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-star"></i>
+                        <span class="trust-badge-text">5-Star Rated</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-leaf"></i>
+                        <span class="trust-badge-text">Eco-Friendly</span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -118,11 +150,6 @@
         <h2>Why Choose Edge Cleaning Solutions?</h2>
         <p class="mt-4">At Edge Cleaning Solutions, we are dedicated to building long-term relationships with our clients by providing exceptional cleaning services with a personalized touch. Our goal is to make your life easier by delivering reliable, top-tier cleaning solutions every time.</p>
         <p>Contact us today for a free estimate or to learn more about how we can assist with your cleaning needs. Experience the Edge Cleaning Solutions difference today!</p>
-        
-        <div class="mt-4">
-            <a href="#services" class="btn btn-primary me-2">Our Services</a>
-            <a href="#contact" class="btn btn-primary">Get a Free Estimate</a>
-        </div>
 
         <hr class="mt-5">
 
@@ -203,11 +230,15 @@
     
 
     <section id="contact" class="container rounded-container mt-5 text-center">
-        <h2><b>Need a Quote or Have a Question?</b></h2>
-            <h2><b>Get in Touch With Us</b></h2>
-            <br>
-            <p>We’d love to hear from you! Fill out the form below, and our team will get back to you as soon as possible.</p>
-            <br>
+        <h2 class="mb-3"><i class="fas fa-comments"></i> <b>Ready to Get Started?</b></h2>
+        <h3 class="mb-4"><b>Get Your Free Quote Today!</b></h3>
+        <p class="lead">We'd love to hear from you! Fill out the form below or call us directly, and our team will get back to you as soon as possible.</p>
+        <div class="my-4">
+            <a href="tel:+1234567890" class="btn btn-cta-primary btn-lg">
+                <i class="fas fa-phone-alt"></i> Call Now: (123) 456-7890
+            </a>
+        </div>
+        <hr class="my-4">
             <form id="contact-form" action="https://formspree.io/f/mldgorlr" method="POST" class="mt-4">
             <div class="mb-3">
                 <label for="subject" class="form-label">Subject <span style="color: red;" aria-label="required">*</span></label>
@@ -269,6 +300,12 @@
             </div>
         </div>
     </div>
+
+    <!-- Floating Call-to-Action Button -->
+    <a href="tel:+1234567890" class="floating-cta" aria-label="Call Edge Cleaning Solutions">
+        <i class="fas fa-phone-alt"></i>
+        <span>Call Now</span>
+    </a>
 
     <footer>
         <div class="container">

@@ -2,6 +2,9 @@
 :root {
     --primary-color: #1c3b60;
     --secondary-color: #326799;
+    --accent-color: #4a90e2;
+    --success-color: #28a745;
+    --cta-color: #ff6b35;
     --text-light: #fff;
     --text-dark: #555;
     --border-radius: 15px;
@@ -352,5 +355,206 @@ footer a:hover {
 
     #cookie-consent-banner .btn {
         flex: 1;
+    }
+}
+
+/* Click-to-Call Button Styles */
+.call-button {
+    background: linear-gradient(135deg, var(--cta-color), #e85d2a);
+    color: var(--text-light);
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all var(--transition-speed) ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.call-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+    color: var(--text-light);
+}
+
+.call-button i {
+    font-size: 18px;
+}
+
+/* Floating Call-to-Action Button */
+.floating-cta {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    background: linear-gradient(135deg, var(--cta-color), #e85d2a);
+    color: var(--text-light);
+    border: none;
+    padding: 16px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all var(--transition-speed) ease;
+    animation: pulse 2s infinite;
+}
+
+.floating-cta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.5);
+}
+
+.floating-cta i {
+    font-size: 20px;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+    }
+    50% {
+        box-shadow: 0 6px 25px rgba(255, 107, 53, 0.6);
+    }
+}
+
+/* Hero Section Enhancement */
+.hero-section {
+    background: linear-gradient(135deg, rgba(28, 59, 96, 0.95), rgba(50, 103, 153, 0.95));
+    padding: 60px 40px;
+    border-radius: var(--border-radius);
+    margin-top: 40px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-cta-primary {
+    background: linear-gradient(135deg, var(--cta-color), #e85d2a);
+    border: none;
+    padding: 14px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all var(--transition-speed) ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.btn-cta-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+
+.btn-cta-secondary {
+    background: transparent;
+    border: 2px solid var(--text-light);
+    color: var(--text-light);
+    padding: 14px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all var(--transition-speed) ease;
+}
+
+.btn-cta-secondary:hover {
+    background: var(--text-light);
+    color: var(--primary-color);
+}
+
+/* Enhanced Service Boxes */
+.service-box {
+    transition: all var(--transition-speed) ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    font-size: 48px;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+/* Trust Badges Section */
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.trust-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.trust-badge i {
+    font-size: 36px;
+    color: var(--accent-color);
+}
+
+.trust-badge-text {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .floating-cta {
+        bottom: 20px;
+        right: 20px;
+        padding: 14px 20px;
+        font-size: 14px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .call-button {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 24px;
     }
 }
