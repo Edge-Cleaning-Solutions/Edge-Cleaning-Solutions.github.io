@@ -184,7 +184,74 @@
     </section>
     
 
-    <section id="contact" class="contact-section">        <div class="container">            <div class="text-center mb-5">                <span class="section-label">Get In Touch</span>                <h2 class="section-title">Ready to Get Started?</h2>                <p class="lead">Get your free quote today! Fill out the form below and our team will get back to you as soon as possible.</p>            </div>                        <div class="row justify-content-center">                <div class="col-lg-8">                    <div class="contact-form-wrapper">                        <form id="contact-form" action="https://formspree.io/f/mldgorlr" method="POST">                          <div class="mb-3">                              <label for="subject" class="form-label">Subject <span style="color: red;" aria-label="required">*</span></label>                              <select name="subject" id="subject" class="form-select" required>                                  <option value="">Select a subject</option>                                  <option value="Free Estimate">Free Estimate</option>                                  <option value="Cleaning Request">Cleaning Request</option>                                  <option value="Service Request">Service Request</option>                                  <option value="Career Opportunities">Career Opportunities</option>                                  <option value="Feedback">Feedback</option>                                  <option value="Other">Other</option>                              </select>                          </div>                                                <div class="mb-3">                              <label for="description" class="form-label">Description <span style="color: red;" aria-label="required">*</span></label>                              <textarea name="description" id="description" class="form-control" rows="4" placeholder="Please provide any details about your request, such as the type of cleaning service you need or any questions you may have." required></textarea>                          </div>                                                <div class="mb-3">                              <label for="name" class="form-label">Full Name <span style="color: red;" aria-label="required">*</span></label>                              <input type="text" name="name" id="name" class="form-control" required>                          </div>                                                <div class="mb-3">                              <label for="email" class="form-label">Email <span style="color: red;" aria-label="required">*</span></label>                              <input type="email" name="email" id="email" class="form-control" required>                          </div>                                                <div class="mb-3">                              <label for="phone" class="form-label">Phone Number <span style="color: red;" aria-label="required">*</span></label>                              <input type="tel" name="phone" id="phone" class="form-control" pattern="[0-9\s\-\(\)\+]+" title="Please enter a valid phone number" required>                          </div>                                                <div class="mb-3">                              <label for="company" class="form-label">Company Name (Optional)</label>                              <input type="text" name="company" id="company" class="form-control">                          </div>                                                <div class="mb-3">                              <label for="job-title" class="form-label">Job Title (Optional)</label>                              <input type="text" name="jobTitle" id="job-title" class="form-control">                          </div>                          <!-- Honeypot field for spam prevention -->                          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">                                                <div class="text-center">                              <button type="submit" class="btn btn-cta-modern btn-lg px-5">Submit Request</button>                          </div>                      </form>                    </div>                </div>            </div>        </div>    </section>
+    
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">Ready to Get Started?</h2>
+                <p class="lead">Get your free quote today! Fill out the form below and our team will get back to you as soon as possible.</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form-wrapper">
+                        <form id="contact-form" action="https://formspree.io/f/mldgorlr" method="POST">
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject <span style="color: red;" aria-label="required">*</span></label>
+                                <select name="subject" id="subject" class="form-select" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="Free Estimate">Free Estimate</option>
+                                    <option value="Cleaning Request">Cleaning Request</option>
+                                    <option value="Service Request">Service Request</option>
+                                    <option value="Career Opportunities">Career Opportunities</option>
+                                    <option value="Feedback">Feedback</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Description <span style="color: red;" aria-label="required">*</span></label>
+                                <textarea name="description" id="description" class="form-control" rows="4" placeholder="Please provide any details about your request, such as the type of cleaning service you need or any questions you may have." required></textarea>
+                            </div>
+                        
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name <span style="color: red;" aria-label="required">*</span></label>
+                                <input type="text" name="name" id="name" class="form-control" required>
+                            </div>
+                        
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email <span style="color: red;" aria-label="required">*</span></label>
+                                <input type="email" name="email" id="email" class="form-control" required>
+                            </div>
+                        
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number <span style="color: red;" aria-label="required">*</span></label>
+                                <input type="tel" name="phone" id="phone" class="form-control" pattern="[0-9\s\-\(\)\+]+" title="Please enter a valid phone number" required>
+                            </div>
+                        
+                            <div class="mb-3">
+                                <label for="company" class="form-label">Company Name (Optional)</label>
+                                <input type="text" name="company" id="company" class="form-control">
+                            </div>
+                        
+                            <div class="mb-3">
+                                <label for="job-title" class="form-label">Job Title (Optional)</label>
+                                <input type="text" name="jobTitle" id="job-title" class="form-control">
+                            </div>
+
+                            <!-- Honeypot field for spam prevention -->
+                            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                        
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-cta-modern btn-lg px-5">Submit Request</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Cookie Consent Banner -->
     <div id="cookie-consent-banner">
         <div class="cookie-consent-content">
