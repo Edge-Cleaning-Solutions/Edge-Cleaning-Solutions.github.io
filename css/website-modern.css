@@ -44,6 +44,14 @@ body {
     box-shadow: 0 4px 30px rgba(0,0,0,0.2);
 }
 
+.logo-img {
+    width: 80px;
+    height: 80px;
+    margin-right: 12px;
+    object-fit: cover;
+    
+}
+
 .brand-text {
     font-size: 1.2rem;
     font-weight: 600;
